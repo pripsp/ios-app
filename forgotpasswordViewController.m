@@ -1,0 +1,45 @@
+//
+//  forgotpasswordViewController.m
+//  SimpleApp
+//
+//  Created by Priyal on 2/25/17.
+//  Copyright © 2017 Priyal. All rights reserved.
+//
+
+#import "forgotpasswordViewController.h"
+#import "OTPViewController.h"
+
+@interface forgotpasswordViewController ()
+
+@end
+
+@implementation forgotpasswordViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (IBAction)btncontinueforgotpass:(UIButton *)sender
+{
+    OTPViewController *send= [self.storyboard instantiateViewControllerWithIdentifier:@"OTPViewController"];
+    
+    [self.navigationController pushViewController:send animated:YES];
+
+}
+@end
